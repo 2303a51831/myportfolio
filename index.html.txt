@@ -1,0 +1,25 @@
+import numpy as np
+
+# Create two 3x3 matrices with random integers (range 1–10)
+A = np.random.randint(1, 11, (3, 3))
+B = np.random.randint(1, 11, (3, 3))
+
+# Perform element-wise addition and subtraction
+add_result = np.add(A, B)
+sub_result = np.subtract(A, B)
+
+# Display original matrices and results
+print("Matrix A:\n", A)
+print("Matrix B:\n", B)
+print("Addition Result (A + B):\n", add_result)
+print("Subtraction Result (A - B):\n", sub_result)
+
+# Verify one element manually
+# Let's verify element (0,0)
+manual_add = A[0, 0] + B[0, 0]
+manual_sub = A[0, 0] - B[0, 0]
+print(f"Manual check for position (0,0): Add = {manual_add}, Sub = {manual_sub}")
+
+# Comment on broadcasting
+print("\nBroadcasting Note: Here both matrices are the same shape (3x3), "
+      "so broadcasting is not required. Operations are element-wise.")
